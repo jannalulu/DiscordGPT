@@ -41,9 +41,9 @@ async def ask(ctx, *, question: str=None):
 
         # Call the GPT API with the question
         response = openai.chat.completions.create(
-          model="gpt-4-1106-preview",
+          model="gpt-4o",
           messages=messages,
-          temperature=0.7,
+          temperature=0.2,
           max_tokens=4096
         )
         message_content = response.choices[0].message.content if response.choices else "I'm unable to answer that question."
